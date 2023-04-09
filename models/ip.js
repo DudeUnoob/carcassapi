@@ -10,6 +10,9 @@ const Schema = new mongoose.Schema({
   ip: {
     type:String,
     unique: true
+  },
+  dateAccessed: {
+    type: String
   }
 })
 
