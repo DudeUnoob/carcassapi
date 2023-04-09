@@ -38,7 +38,7 @@ app.post('/api/v1/ip', (req, res, next) => {
       new ipModel({
     geolocation: req.body.ip,
     ip: ip,
-    dateAccessed: Date.now()
+    dateAccessed: new Date().toString()
   }).save()
   .then(doc => {
     return res.json({ message: "Successfully added ip to database", geolocation: req.body.ip })
